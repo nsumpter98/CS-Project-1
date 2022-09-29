@@ -1,14 +1,19 @@
 package prj1_src;
 
 
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class Loader {
 
 
     //enter year, gender, and name and display the ranking for the name
-    public static void displayRanking(){
+    public static void displayRanking() throws FileNotFoundException {
         System.out.println("1. Display the ranking of a name");
+        NamePopRanking n = load("src/txtFiles/babynamesranking2001.txt");
+        System.out.println("finished loading");
+        n.displayRanking();
     }
 
     //enter "filename"(year) display the names that are used for both genders in that file/year
@@ -24,6 +29,43 @@ public class Loader {
 
     public static void displayRandomNameStartingWithALetter(){
         System.out.println("4. Display a random name starting with a letter");
+    }
+
+    public static NamePopRanking load(String filename) throws FileNotFoundException {
+        //create a new NamePopRanking object
+        //create a new scanner
+        Scanner scanner = new Scanner(new File(filename));
+        Scanner scanner2 = new Scanner(new File(filename));
+        //count number of lines in file
+        int count = 0;
+        while (scanner2.hasNextLine()) {
+            count++;
+            scanner2.nextLine();
+        }
+        NamePopRanking namePopRanking = new NamePopRanking(count);
+        System.out.println("Count: " + count);
+
+        //create a counter
+        int i = 0;
+        //while the scanner has another line
+        while (scanner.hasNextLine()) {
+            //create a new string and set it to the next line
+            String line = scanner.nextLine();
+            //create a new string array and set it to the line split by commas
+            String[] lineArray = line.replaceAll("\\s+", " ").split(" ");
+            //create a new NamePopRanking object and set it to the array
+            System.out.println(lineArray[0] + " " + lineArray[1] + " " + lineArray[2] + " " + lineArray[3] + " " + lineArray[4]);
+            Baby namePopRanking1 = new Baby(lineArray[1],Integer.parseInt(lineArray[0]) ,0, "M");
+            System.out.println(namePopRanking1);
+            Baby namePopRanking2 = new Baby(lineArray[3], Integer.parseInt(lineArray[0]),0, "F");
+            //add the NamePopRanking object to the array
+            namePopRanking.addBaby(namePopRanking1);
+            namePopRanking.addBaby(namePopRanking2);
+            //increment the counter
+            i++;
+        }
+        //return the NamePopRanking object
+        return namePopRanking;
     }
 
     public static void main(String[] args) {

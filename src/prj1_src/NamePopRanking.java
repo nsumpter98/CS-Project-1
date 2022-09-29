@@ -50,8 +50,7 @@ public class NamePopRanking {
         //while the counter is less than the size of the array
         while (i < size) {
             //if the name in the array is equal to the name entered by the user
-            System.out.println(babyArray[i].getName());
-            System.out.println(babyArray[i].getGender());
+
             if (babyArray[i].getName().equals(name.trim())) {
                 if (babyArray[i].getGender().equals(gender.trim())) {
                     //print the ranking of the name

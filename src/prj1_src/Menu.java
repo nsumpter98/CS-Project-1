@@ -1,5 +1,6 @@
 package prj1_src;
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Menu {
@@ -13,7 +14,7 @@ public class Menu {
    }
 
 
-    public static void menu() {
+    public static void menu() throws FileNotFoundException {
         cls();
 
         while (true){
