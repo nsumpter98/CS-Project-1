@@ -4,6 +4,28 @@ package prj1_src;
 import java.io.FileNotFoundException;
 
 public class Loader {
+
+
+    //enter year, gender, and name and display the ranking for the name
+    public static void displayRanking(){
+        System.out.println("1. Display the ranking of a name");
+    }
+
+    //enter "filename"(year) display the names that are used for both genders in that file/year
+    public static void displayBothGendersName(){
+        System.out.println("2. Display");
+    }
+
+    //enter "filename"(year), gender and some string to display the names and their rankings that begin with that specific string
+    public static void displayRankingOfNameStartingWithALetter(){
+        System.out.println("3. Display the ranking of a name starting with a letter");
+    }
+
+
+    public static void displayRandomNameStartingWithALetter(){
+        System.out.println("4. Display a random name starting with a letter");
+    }
+
     public static void main(String[] args) {
         String t = "src\\txtFiles";
 

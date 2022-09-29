@@ -2,7 +2,7 @@ package prj1_src;
 
 import java.util.Scanner;
 
-public class menu {
+public class Menu {
    public static void cls(){
       for (int i = 0; i < 100; i++) {
          System.out.println();
@@ -13,7 +13,7 @@ public class menu {
    }
 
 
-    public static void main(String[] args) {
+    public static void menu() {
         cls();
 
         while (true){
@@ -28,19 +28,19 @@ public class menu {
 
             if (choice == 1){
                 cls();
-                System.out.println("1. Display the ranking of a name");
+                Loader.displayRanking();
             }
             else if (choice == 2) {
                 cls();
-                System.out.println("2. Display both genders names that are the same");
+                Loader.displayBothGendersName();
             }
             else if (choice == 3) {
                 cls();
-                System.out.println("3. Display the ranking of a name starting with a letter");
+                Loader.displayRankingOfNameStartingWithALetter();
             }
             else if (choice == 4) {
                 cls();
-                System.out.println("4. Display a random name starting with a letter");
+                Loader.displayRandomNameStartingWithALetter();
             }
             else if (choice == 5) {
                 cls();
