@@ -171,7 +171,7 @@ public class NamePopRanking {
         //create a random number generator
         Random rand = new Random();
         //create a random number
-        int randNum = rand.nextInt(names.size() + 1);
+        int randNum = rand.nextInt(names.size());
         //print the random name
         System.out.println("Random name: " + nameArray[randNum]);
     }
