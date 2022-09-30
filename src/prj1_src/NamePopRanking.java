@@ -165,11 +165,9 @@ public class NamePopRanking {
         for (String name : names) {
             //add the name to the array
             nameArray[j] = name;
-            System.out.println(nameArray[j]);
             //increment the counter
             j++;
         }
-        System.out.println(nameArray.toString());
         //create a random number generator
         Random rand = new Random();
         //create a random number

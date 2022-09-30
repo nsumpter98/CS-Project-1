@@ -27,11 +27,17 @@ public class Loader {
     //enter "filename"(year), gender and some string to display the names and their rankings that begin with that specific string
     public static void displayRankingOfNameStartingWithALetter(){
         System.out.println("3. Display the ranking of a name starting with a letter");
+        NamePopRanking n = load("src/txtFiles/babynamesranking2001.txt");
+        System.out.println("finished loading");
+        n.displayRankingStartingWith();
     }
 
 
     public static void displayRandomNameStartingWithALetter(){
         System.out.println("4. Display a random name starting with a letter");
+        NamePopRanking n = load("src/txtFiles/babynamesranking2001.txt");
+        System.out.println("finished loading");
+        n.randomNameStartingWith();
     }
 
     public static NamePopRanking load(String filename)  {
