@@ -66,11 +66,11 @@ public class Loader {
                 //create a new string array and set it to the line split by commas
                 String[] lineArray = line.replaceAll("\\s+", " ").split(" ");
                 //create a new NamePopRanking object and set it to the array
-                Baby namePopRanking1 = new Baby(lineArray[1],Integer.parseInt(lineArray[0]) ,0, "M");
-                Baby namePopRanking2 = new Baby(lineArray[3], Integer.parseInt(lineArray[0]),0, "F");
+                Baby babyM = new Baby(lineArray[1],Integer.parseInt(lineArray[0]) ,0, "M");
+                Baby babyF = new Baby(lineArray[3], Integer.parseInt(lineArray[0]),0, "F");
                 //add the NamePopRanking object to the array
-                namePopRanking.addBaby(namePopRanking1);
-                namePopRanking.addBaby(namePopRanking2);
+                namePopRanking.addBaby(babyM);
+                namePopRanking.addBaby(babyF);
                 //increment the counter
                 i++;
             }
