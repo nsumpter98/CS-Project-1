@@ -24,19 +24,14 @@ public class NamePopRanking {
         }
     }
 
-    public void addBabys(Baby[] b) {
-        babyArray = b;
-    }
+
 
     // prompt the user to enter year, gender, and name and display the
     //ranking for the name.
     public void displayRanking() {
         //create a new scanner object
         Scanner scanner = new Scanner(System.in);
-        //prompt the user to enter a year
-        System.out.println("Enter a year: ");
-        //store the user input in a variable
-        int year = scanner.nextInt();
+
         //prompt the user to enter a gender
         System.out.println("Enter a gender: ");
         //store the user input in a variable
