@@ -94,5 +94,4 @@ Enter your choice: 5
 ## Contributing
 Project is on GitHub at [CS-Project-1](https://github.com/nsumpter98/CS-Project-1)
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+
