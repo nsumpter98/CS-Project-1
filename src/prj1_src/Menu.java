@@ -3,8 +3,14 @@ package prj1_src;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * The type Menu.
+ */
 public class Menu {
-   public static void cls(){
+    /**
+     * Cls.
+     */
+    public static void cls(){
       for (int i = 0; i < 100; i++) {
          System.out.println();
       }
@@ -14,6 +20,11 @@ public class Menu {
    }
 
 
+    /**
+     * Menu.
+     *
+     * @throws FileNotFoundException the file not found exception
+     */
     public static void menu() throws FileNotFoundException {
         cls();
 

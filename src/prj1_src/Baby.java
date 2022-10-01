@@ -7,7 +7,7 @@ package prj1_src;
 public class Baby {
     private String name;
     private int rank;
-    private int count;
+    private String count;
     private String gender;
 
     /**
@@ -18,7 +18,7 @@ public class Baby {
      * @param count  the count
      * @param gender the gender
      */
-    public Baby(String name, int rank, int count, String gender) {
+    public Baby(String name, int rank, String count, String gender) {
         this.name = name;
         this.rank = rank;
         this.count = count;
@@ -48,7 +48,7 @@ public class Baby {
      *
      * @return the count
      */
-    public int getCount() {
+    public String getCount() {
         return count;
     }
 
@@ -84,7 +84,7 @@ public class Baby {
      *
      * @param count the count
      */
-    public void setCount(int count) {
+    public void setCount(String count) {
         this.count = count;
     }
 
@@ -99,7 +99,7 @@ public class Baby {
 
 
     public String toString() {
-        return "Name: " + name + " Rank: " + rank + " Count: " + count + "Gender: " + gender;
+        return "Name: " + name + ", Rank: " + rank + ", Count: " + count + ", Gender: " + gender;
 
     }
 
