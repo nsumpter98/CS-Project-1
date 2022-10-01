@@ -44,32 +44,21 @@ public class NamePopRanking {
      * @param year the year
      */
     public void displayRanking(int year) {
-        //create a new scanner object
         Scanner scanner = new Scanner(System.in);
 
-        //prompt the user to enter a gender
         System.out.print("Enter a gender: ");
-        //store the user input in a variable
         String gender = scanner.next();
-        //prompt the user to enter a name
         System.out.print("Enter a name: ");
-        //store the user input in a variable
         String name = scanner.next();
-        //create a counter
         int i = 0;
-        //while the counter is less than the size of the array
         while (i < size) {
-            //if the name in the array is equal to the name entered by the user
 
             if (babyArray[i].getName().equalsIgnoreCase(name.trim())) {
                 if (babyArray[i].getGender().equalsIgnoreCase(gender.trim())) {
-                    //print the ranking of the name
                     System.out.println((babyArray[i].getGender() == "M" ? "Boy name " : "Girl name ") + babyArray[i].getName() + " is ranked #" + babyArray[i].getRank() + " in the year " + year);
-                    //break out of the loop
                     break;
                 }
             }
-            //increment the counter
             i++;
         }
     }
